@@ -1,0 +1,8 @@
+<h2>Students who passed the exam:</h2>
+{{#each sorted}}
+    {{#if hasPassed}}
+        <div>Name: {{name}}</div>
+        <div>Score: {{score}}</div>
+        <hr>
+    {{/if}}
+{{/each}}
