@@ -37,10 +37,16 @@ const students = [
 ];
 
 function sortByScore(arr) {
-  // .. your code here
+  const sorted = [...arr].sort((a,b) => {
+    return a.score < b.score ? 1 : -1
+})
+
+  const [firstPlace, secondPlace, thirdPlace, ...rest] = sorted
+  const ranks = [firstPlace, secondPlace, thirdPlace, rest]
+  return ranks;
 }
 
-sortByScore(students);
+console.log(sortByScore(students));
 
 // {
 //   firstPlace: { name: 'jess', score: 10 },

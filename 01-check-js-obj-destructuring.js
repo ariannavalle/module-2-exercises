@@ -17,4 +17,10 @@ const data = {
   }
 };
 
-// ... your  code  here
+const {
+  name: {firstName, lastName},
+  favoriteFootballTeam,
+  hometown: {city, country}
+} = data;
+
+console.log(firstName, lastName, favoriteFootballTeam, city, country)

@@ -4,7 +4,17 @@
 // If less then 18, reject with '___ years is underage. Here is a fresh squeezed orange juice for you!'
 
 function eligibleToDrink(age) {
-  // ... your code
+  const myPromise = new Promise(function(resolve, reject) {
+    if (age>=18) {
+      const msg = `Being ${age} years old, you are eligible to  drink.`
+      resolve(msg)
+    } 
+    else {
+      const msg = `${age} years is underage. Here is a fresh squeezed orange juice for you!`
+      reject(msg)
+    } 
+  });
+  return myPromise;
 }
 
 eligibleToDrink(15)
